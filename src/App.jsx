@@ -1,10 +1,12 @@
-import ToggleButton from "./components/ToggleButton";
+import Header from "./components/Header/Header.jsx";
+import { LanguageContextProvider } from "./contexts/LanguageContext.jsx";
 
 function App() {
+  console.log(window.matchMedia("(prefers-color-scheme: dark)"));
   return (
-    <>
-      <ToggleButton />
-    </>
+    <LanguageContextProvider>
+      <Header />
+    </LanguageContextProvider>
   );
 }
 
