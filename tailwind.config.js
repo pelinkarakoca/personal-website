@@ -1,22 +1,23 @@
+/** @type {import('tailwindcss').Config} */
+
 export default {
+  darkMode: ["selector", '[data-theme="dark"]'],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        inter: ["Inter", "sans-serif"],
-      },
       colors: {
-        darkPurple: "rgba(71, 49, 211, 1)",
-        buttonBlue: "rgba(55, 48, 163, 1)",
-        green: "rgba(203, 242, 129, 1)",
-        lightPurple: "rgba(143, 136, 255, 1)",
-        yellow: "rgba(255, 232, 110, 1)",
-        white: "rgba(255, 255, 255, 1)",
-        black: "",
+        /*, */
+        customGreen: `rgba(var(--color-green))`,
+        customPurple: "rgba(var(--color-purple))",
+        customWhite: "rgba(var(--color-white))",
+        customPurple2: "rgba(var(--color-purple-2))",
+        customToggleButton: "rgba(var(--color-toggle-button))",
+        customSwitch: "rgba(var(--color-switch))",
+        customBg1: `rgba(var(--color-bg-primary))`,
+        customBg2: `rgba(var(--color-bg-secondary))`,
       },
       backgroundImage: {
-        "gradient-light": "linear-gradient(to right, #4731D3 60%, #CBF281 40%)",
-        "gradient-dark": "linear-gradient(to right, #171043 60%, #252128 40%)",
+        bgGradient: "var(--color-bkg)",
       },
     },
   },

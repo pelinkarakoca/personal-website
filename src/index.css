@@ -1,4 +1,43 @@
+@config "../tailwind.config.js";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Londrina+Solid:wght@100;300;400;900&display=swap");
+
+@layer base {
+  :root {
+    --color-bkg: linear-gradient(to right, #4731d3 60%, #cbf281 40%);
+    --color-green: 203, 242, 129, 1;
+    --color-purple: 71, 49, 211, 1;
+  }
+  /*
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bkg: linear-gradient(to right, #171043 60%, #252128 40%);
+      --color-content-1: 203, 242, 129, 1;
+      --color-purple: 23, 16, 67, 1;
+    }*/
+
+  :root[data-theme="dark"] {
+    --color-bkg: linear-gradient(to right, #171043 60%, #252128 40%);
+    --color-green: 203, 242, 129, 1;
+    --color-purple: 23, 16, 67, 1;
+    --color-purple-2: 37, 33, 40, 1;
+    --color-white: 255, 255, 255, 1;
+    --color-bg-primary: 23, 16, 67, 1;
+    --color-bg-secondary: 26, 33, 11, 1;
+    --color-switch: var(--color-white);
+    --color-toggle-button: 58, 58, 58, 1;
+  }
+  :root[data-theme="light"] {
+    --color-bkg: linear-gradient(to right, #4731d3 65%, #cbf281 35%);
+    --color-green: 203, 242, 129, 1;
+    --color-purple: 71, 49, 211, 1;
+    --color-white: 255, 255, 255, 1;
+    --color-purple-2: 55, 48, 163, 1;
+    --color-bg-primary: 71, 49, 211, 1;
+    --color-bg-secondary: 255, 255, 255, 1;
+    --color-switch: var(--color-purple);
+    --color-toggle-button: 143, 136, 255, 1;
+  }
+}

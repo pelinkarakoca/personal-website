@@ -1,12 +1,21 @@
-import Header from "./components/Header/Header.jsx";
-import { LanguageContextProvider } from "./contexts/LanguageContext.jsx";
+import Main from "./components/Main/Main.jsx";
+import { ThemeContext } from "./contexts/ThemeContext.jsx";
+import { useContext, useEffect } from "react";
 
 function App() {
-  console.log(window.matchMedia("(prefers-color-scheme: dark)"));
+  const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      theme ? "dark" : "light",
+    );
+  }, [theme]);
+
   return (
-    <LanguageContextProvider>
-      <Header />
-    </LanguageContextProvider>
+    <div>
+      <Main />
+    </div>
   );
 }
 
