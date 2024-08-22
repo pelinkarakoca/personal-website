@@ -17,20 +17,20 @@ export default function ToggleButton() {
   }, []);
 
   return (
-    <div className="">
-      <label className="relative inline-flex items-center cursor-pointer">
+    <div className="flex pr-[4em]">
+      <label className="relative inline-flex cursor-pointer items-center">
         <input
           type="checkbox"
           value=""
-          className="sr-only peer"
+          className="peer sr-only"
           checked={theme}
           onChange={(e) => {
             setTheme(e.target.checked);
             setLocalStorage(e.target.checked);
           }}
         />
-        <div className="w-9 h-5 bg-customToggleButton peer-focus:outline-0 peer-focus:ring-transparent rounded-full peer transition-all ease-in-out duration-500 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all "></div>{" "}
-        <div className="uppercase text-xs text-customSwitch font-bold tracking-widest">
+        <div className="peer h-5 w-9 rounded-full bg-customToggleButton transition-all duration-500 ease-in-out after:absolute after:left-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-0 peer-focus:ring-transparent"></div>{" "}
+        <div className="pl-[0.5em] text-xs font-bold uppercase tracking-widest text-customSwitch">
           Dark mode
         </div>
       </label>

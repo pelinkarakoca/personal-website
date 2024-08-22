@@ -16,21 +16,18 @@ export default function LanguageSelectorButton() {
     setLanguage(defaultValue);
   }, []);
 
-  //TODO PARAGRAFIN CLASSINA CURSOR: POINTER EKLE
-
   return (
     <div
-      className="pr-[1.5em]"
+      className="cursor-pointer pr-[1.5em]"
       onClick={() => {
         const selectedLanguage = language === en ? tr : en;
         setLocalStorage(selectedLanguage);
         setLanguage(selectedLanguage);
       }}
     >
-      <p className="text-xs font-bold uppercase tracking-widest text-customWhite">
+      <p className="font text-xs font-semibold uppercase tracking-widest text-customGreen">
         {language.switch}
       </p>
     </div>
   );
 }
-/* TÜRKÇE’YE GEÇ */

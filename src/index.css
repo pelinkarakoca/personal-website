@@ -19,7 +19,7 @@
     }*/
 
   :root[data-theme="dark"] {
-    --color-bkg: linear-gradient(to right, #171043 60%, #252128 40%);
+    --color-bkg: linear-gradient(to right, #171043 65%, #252128 35%);
     --color-green: 203, 242, 129, 1;
     --color-purple: 23, 16, 67, 1;
     --color-purple-2: 37, 33, 40, 1;
@@ -28,6 +28,7 @@
     --color-bg-secondary: 26, 33, 11, 1;
     --color-switch: var(--color-white);
     --color-toggle-button: 58, 58, 58, 1;
+    --color-yellow: 240, 243, 220, 1;
   }
   :root[data-theme="light"] {
     --color-bkg: linear-gradient(to right, #4731d3 65%, #cbf281 35%);
@@ -39,5 +40,6 @@
     --color-bg-secondary: 255, 255, 255, 1;
     --color-switch: var(--color-purple);
     --color-toggle-button: 143, 136, 255, 1;
+    --color-yellow: 240, 243, 220, 1;
   }
 }

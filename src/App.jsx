@@ -13,9 +13,11 @@ function App() {
   }, [theme]);
 
   return (
-    <div>
-      <Main />
-    </div>
+    <>
+      <div>
+        <Main />
+      </div>
+    </>
   );
 }
 
